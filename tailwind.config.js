@@ -1,13 +1,14 @@
-import { defineConfig } from 'tailwindcss'
-
-export default defineConfig({
-  content: ['./src/**/*.{html,ts}'],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./src/**/*.{html,ts}",
+  ],
   theme: {
     extend: {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
-      }
+      },
     },
   },
   plugins: [],
-})
+};
