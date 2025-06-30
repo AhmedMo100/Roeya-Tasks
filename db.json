@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Ahmed"
+    },
+    {
+      "id": "2",
+      "username": "Sara"
+    },
+    {
+      "id": "3",
+      "username": "Yasser"
+    },
+    {
+      "id": "df4e",
+      "username": "Mohamed"
+    },
+    {
+      "id": "8f9d",
+      "username": "Mohamed Tarek"
+    },
+    {
+      "id": "8b5e",
+      "username": "Ahmed Tarek."
+    },
+    {
+      "id": "0b2f",
+      "username": "Hoda"
+    },
+    {
+      "id": "90f4",
+      "username": "Noah"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Design Logo",
+      "description": "Create logo for new campaign",
+      "dueDate": "2025-07-10",
+      "status": "todo",
+      "assignedTo": "Ahmed"
+    },
+    {
+      "id": "7d66",
+      "title": "Project 3",
+      "description": "project 3",
+      "dueDate": "",
+      "status": "in progress",
+      "assignedTo": "Mohamed"
+    },
+    {
+      "id": "bdef",
+      "title": "Project 4.",
+      "description": "Project 4 (Al Haj Coffee Shop).",
+      "dueDate": "2025-07-01",
+      "status": "in progress",
+      "assignedTo": "Ahmed Tarek."
+    },
+    {
+      "id": "b74c",
+      "title": "Project 5",
+      "description": "(Al Haj)",
+      "dueDate": "2025-07-04",
+      "status": "in progress",
+      "assignedTo": "Hoda"
+    },
+    {
+      "id": "c6c9",
+      "title": "Project 10",
+      "description": "Moka Coffee",
+      "dueDate": "2025-07-10",
+      "status": "done",
+      "assignedTo": "Noah"
+    }
+  ]
+}

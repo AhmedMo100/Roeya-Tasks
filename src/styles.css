@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '@fontsource/inter';
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white !important;
+    background-image: linear-gradient(to right bottom, rgb(255, 255, 255) , #cdcdcddb);
+    @apply font-inter bg-gray-50 text-gray-800;
+}
+
+.add-task {
+    height: 79.5vh !important;
+}
+
+h1 {
+    color: white !important;
+    text-align: center;
+}
+
+h2 {
+    color: #303f9f !important;
+    margin: 25px 0 35px 0 !important;
+}
+
+.form-button {
+    background-color: #3f51b5;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 10px;
+}
+
+header {
+    background-image: linear-gradient(to right, rgb(255, 187, 0), rgb(211, 155, 0), rgb(137, 101, 0)) !important;
+}
+
+.view-all-tasks, .back-add-task {
+    background-image: linear-gradient(to right, rgb(255, 187, 0), rgb(226, 166, 0), rgb(206, 151, 0)) !important;
+    padding: 15px 0 !important;
+    transition: 0.3s !important;
+}
+
+.view-all-tasks:hover, .back-add-task:hover {
+    background-color: rgb(255, 187, 0) !important;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tasks-title {
+    background-color: #303f9f !important;
+    color: white !important;
+    padding: 12px 0 !important;
+}
+
+.select-user {
+    color: #303f9f;
+    font-size: 15px !important;
+}
+
+input,
+select,
+button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #3f51b5;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-color: #303f9f;
+}
+
+.task-card {
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #e1eaff;
+    border-left: 5px solid #3f51b5;
+    border-radius: 5px;
+}
+
+.task-card.done {
+    background-color: #d4edda;
+    border-left-color: #28a745;
+}
+
+label {
+    font-weight: bold;
+}

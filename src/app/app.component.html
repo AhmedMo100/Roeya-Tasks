@@ -1,0 +1,6 @@
+<div class="container">
+    <app-header></app-header>
+    <app-user-select (userSelected)="onUserSelected($event)"></app-user-select>
+    <app-add-task></app-add-task>
+    <app-task-list [selectedUser]="selectedUser"></app-task-list>
+</div>
