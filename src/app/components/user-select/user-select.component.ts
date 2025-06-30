@@ -7,18 +7,22 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './user-select.component.html',
-  styleUrls: ['./user-select.component.css']
+  styleUrls: ['./user-select.component.css'],
 })
 export class UserSelectComponent implements OnInit {
   users: any[] = [];
 
   @Output() userSelected = new EventEmitter<string>();
 
+  // ✅ رابط المستخدمين على MockAPI
+  private apiUrl = 'https://6862809696f0cc4e34b9faaa.mockapi.io/roeya/users';
+
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<any[]>('http://localhost:3000/users')
-      .subscribe(data => this.users = data);
+    this.http.get<any[]>(this.apiUrl).subscribe((data) => {
+      this.users = data;
+    });
   }
 
   selectUser(event: Event) {

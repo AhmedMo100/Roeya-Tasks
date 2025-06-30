@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
@@ -9,9 +9,12 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.css']
 })
-export class TaskListComponent implements OnInit {
+export class TaskListComponent implements OnInit, OnChanges {
   @Input() selectedUser: string = '';
   tasks: any[] = [];
+
+  // ✅ رابط الـ MockAPI
+  private apiUrl = 'https://6862809696f0cc4e34b9faaa.mockapi.io/roeya/tasks';
 
   constructor(private http: HttpClient) {}
 
@@ -19,15 +22,17 @@ export class TaskListComponent implements OnInit {
     this.loadTasks();
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['selectedUser']) {
+      this.loadTasks();
+    }
+  }
+
   loadTasks() {
-    this.http.get<any[]>('http://localhost:3000/tasks').subscribe(data => {
+    this.http.get<any[]>(this.apiUrl).subscribe(data => {
       this.tasks = this.selectedUser
         ? data.filter(task => task.assignedTo === this.selectedUser)
         : data;
     });
-  }
-
-  ngOnChanges() {
-    this.loadTasks();
   }
 }
